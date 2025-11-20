@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { Menu, Bell } from "lucide-react";
@@ -22,6 +21,7 @@ export default function Page() {
               <Menu className="w-6 h-6" />
             </button>
 
+            {/* Dropdown */}
             {open && (
               <div
                 onMouseEnter={() => setOpen(true)}
@@ -29,17 +29,17 @@ export default function Page() {
                 className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md border z-20"
               >
                 <nav className="flex flex-col p-2 text-gray-700">
-                  <a href="/" className="px-3 py-2 rounded bg-gray-100 font-semibold">Home</a>
+                  <a href="/" className="px-3 py-2 rounded hover:bg-gray-100">Home</a>
                   <a href="/about" className="px-3 py-2 rounded hover:bg-gray-100">About</a>
                   <a href="/education" className="px-3 py-2 rounded hover:bg-gray-100">Education</a>
-                  <a href="/hobbies" className="px-3 py-2 rounded hover:bg-gray-100">Hobbies</a>
+                  <a href="/hobbies" className="px-3 py-2 rounded bg-gray-100 font-semibold">Hobbies</a>
                   <a href="/contact" className="px-3 py-2 rounded hover:bg-gray-100">Contact</a>
                 </nav>
               </div>
             )}
           </div>
 
-          <h1 className="text-xl font-bold text-red-600">RMDBSite</h1>
+          <h1 className="text-xl font-bold text-red-600">Hobbies</h1>
         </div>
 
         <div className="flex items-center gap-4">
@@ -55,44 +55,43 @@ export default function Page() {
       </header>
 
       {/* Main Content */}
-      <main className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Welcome to My Personal Website</h2>
-        <p className="text-gray-700 max-w-2xl">
-          Hi! This is my digital space inspired by YouTube's clean and simple layout.
-          Explore my About, Education, Hobbies, and Contact pages to learn more
-          about me.
+      <main className="max-w-5xl mx-auto p-6">
+        <h2 className="text-2xl font-bold mb-4">Things I Enjoy Doing</h2>
+        <p className="text-gray-700 max-w-2xl mb-6">
+          Here are some of the hobbies and passions that make my everyday life more meaningful and fun.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          <a href="/about" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+        {/* YouTube-style cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
             <div className="w-full h-40 rounded-lg mb-3 overflow-hidden">
             <Image
-              src="/rmdb.png"
-              alt="About Me"
+              src="/art.png"
+              alt="art"
               width={400}
               height={160}
               className="object-cover w-full h-full"
             />
+            </div>
+            <h3 className="text-lg font-semibold">Digital Art</h3>
+            <p className="text-sm text-gray-600">Drawing illustrations and fanart.</p>
           </div>
-            <h3 className="text-lg font-semibold">About Me</h3>
-            <p className="text-sm text-gray-600">Get to know who I am.</p>
-          </a>
 
-          <a href="/education" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+          <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
             <div className="w-full h-40 rounded-lg mb-3 overflow-hidden">
             <Image
-              src="/ncf.png"
-              alt="ncf"
+              src="/code.jpg"
+              alt="cd"
               width={400}
               height={160}
               className="object-cover w-full h-full"
             />
+            </div>
+            <h3 className="text-lg font-semibold">Coding</h3>
+            <p className="text-sm text-gray-600">Trying to build apps, games, and websites.</p>
           </div>
-            <h3 className="text-lg font-semibold">Education</h3>
-            <p className="text-sm text-gray-600">My academic background.</p>
-          </a>
 
-          <a href="/hobbies" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+          <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
             <div className="w-full h-40 rounded-lg mb-3 overflow-hidden">
             <Image
               src="/Nightwalk.png"
@@ -102,15 +101,9 @@ export default function Page() {
               className="object-cover w-full h-full"
             />
             </div>
-            <h3 className="text-lg font-semibold">Hobbies</h3>
-            <p className="text-sm text-gray-600">Things I love doing.</p>
-          </a>
-
-          <a href="/contact" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
-            <div className="w-full h-40 bg-gray-300 rounded-lg mb-3"></div>
-            <h3 className="text-lg font-semibold">Contact</h3>
-            <p className="text-sm text-gray-600">Reach out to me.</p>
-          </a>
+            <h3 className="text-lg font-semibold">Music</h3>
+            <p className="text-sm text-gray-600">Listening, exploring genres, relaxing.</p>
+          </div>
         </div>
       </main>
     </div>
