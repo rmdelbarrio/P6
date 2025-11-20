@@ -64,11 +64,11 @@ export default function Page() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold">Yuki</h2>
-            <p className="text-gray-600 mt-1">Welcome to my channel-inspired personal page!</p>
+            <h2 className="text-3xl font-bold">Rommel Michael T. del Barrio</h2>
+            <p className="text-gray-600 mt-1">Welcome to my channel...... i mean personal page!</p>
 
             <p className="text-gray-700 mt-4 leading-relaxed max-w-2xl">
-              I'm someone who enjoys learning, creating, and exploring different forms of art and technology. This website is my personal corner of the internet, inspired by YouTube's clean layout but shaped around who I am.
+              I'm someone who enjoys learning, creating, and exploring different types and forms of art and technology.  and this website is my personal corner of the internet, inspired by youtube which i treasure so much, it was my first teacher for this afterall.
             </p>
 
             <p className="text-gray-700 mt-4 leading-relaxed max-w-2xl">
@@ -81,13 +81,29 @@ export default function Page() {
         <h3 className="text-2xl font-bold mt-10 mb-4">Sections</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <a href="/education" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
-            <div className="w-full h-40 bg-gray-300 rounded-lg mb-3"></div>
+            <div className="w-full h-40 rounded-lg mb-3 overflow-hidden">
+            <Image
+              src="/ncf.png"
+              alt="ncf"
+              width={400}
+              height={160}
+              className="object-cover w-full h-full"
+            />
+          </div>
             <h3 className="text-lg font-semibold">Education</h3>
             <p className="text-sm text-gray-600">Learn about my academic background.</p>
           </a>
 
           <a href="/hobbies" className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
-            <div className="w-full h-40 bg-gray-300 rounded-lg mb-3"></div>
+            <div className="w-full h-40 rounded-lg mb-3 overflow-hidden">
+            <Image
+              src="/Nightwalk.png"
+              alt="NW"
+              width={400}
+              height={160}
+              className="object-cover w-full h-full"
+            />
+            </div>
             <h3 className="text-lg font-semibold">Hobbies</h3>
             <p className="text-sm text-gray-600">See what I love doing in my free time.</p>
           </a>
