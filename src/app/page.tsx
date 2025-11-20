@@ -58,8 +58,8 @@ export default function Page() {
       <main className="p-6">
         <h2 className="text-2xl font-bold mb-4">Welcome to My Personal Website</h2>
         <p className="text-gray-700 max-w-2xl">
-          Hi! This is my digital space inspired by YouTube's clean and simple layout.
-          Explore my About, Education, Hobbies, and Contact pages to learn more
+          Ellour! welcome to my side of the internet.
+          Explore my About me, Education, Hobbies, and Contact pages to learn more
           about me.
         </p>
 
